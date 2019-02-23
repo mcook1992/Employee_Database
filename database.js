@@ -50,15 +50,16 @@ database.ref().on(
         //Convert Date
         var newFormat = "MM/DD/YYYY";
         var convertDate = moment(sv.startDate, newFormat);
+        var newMoment = moment();
 
 
         var tableRow = $("<tr>");
         var nameInfo = $("<th>").text(sv.name);
         var positionInfo = $("<th>").text(sv.position);
         var salaryInfo = $("<th>").text(sv.salary);
-        var startDateInfo = $("<th>").text(convertDate);
-        var monthsWorked = $("<th></th>").text(4);
-        var calcTotalBilled = (4 * parseInt(sv.salary));
+        var startDateInfo = $("<th>").text(convertDate.format("MM/DD/YYYY"));
+        var monthsWorked = $("<th></th>").text(moment().diff(convertDate, "months"));
+        var calcTotalBilled = ( moment().diff(convertDate, "months") * parseInt(sv.salary));
         var totalBilled = $("<th></th>").text(calcTotalBilled);
 
 
