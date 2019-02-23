@@ -1,0 +1,47 @@
+* {
+  font-family: "Kanit", sans-serif;
+}
+
+#title {
+  padding-top: 12%;
+  padding-bottom: 5%;
+  border: rgba(185, 14, 14, 0.729) solid 10px;
+  font-family: "Cinzel", sans-serif;
+  background: whitesmoke;
+}
+
+#topheading {
+  font-size: 500%;
+}
+
+#subheading {
+  font-size: 250%;
+}
+
+body {
+  background-image: url("wall-2-1543281886.jpg");
+  background-repeat: repeat;
+}
+
+.table {
+  background: white;
+  margin-top: 15px;
+}
+.th {
+  background: white;
+}
+col {
+  background: white;
+}
+
+#whitetable {
+  background: white;
+}
+
+.forms {
+  margin-top: 15px;
+}
+
+.col-lg-4 {
+  padding: 0px;
+}
