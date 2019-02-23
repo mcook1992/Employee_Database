@@ -36,8 +36,9 @@
                     <th scope="col">Name</th>
                     <th scope="col">Position</th>
                     <th scope="col">Start Date</th>
-                    <th scope="col">Days Worked</th>
-                    <th scope="col">Salary</th>
+                    <th scope="col">Months Worked</th>
+                    <th scope="col">Monthly Salary</th>
+                    <th scope="col">Total Billed</th>
                 </tr>
             </thead>
             </div>
@@ -66,11 +67,7 @@
                         <label for="employee-startDate">Start Date</label>
                         <input class="form-control" id="employee-startDate" type="number" />
                       </div>
-                      <div class="form-group row">
-                            <label for="employee-daysWorked">Days Worked</label>
-                            <input class="form-control" id="employee-daysWorked" type="number" />
-                          </div>
-                          <div class="form-group row">
+                  <div class="form-group row">
                                 <label for="employee-salary">Salary</label>
                                 <input class="form-control" id="employee-salary" type="number" />
                               </div>
@@ -86,18 +83,7 @@
 <!--firebase  -->
 
 <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDvgJB9iMN0wKe9dsOcq6zOvyBXY18F-50",
-    authDomain: "employeedatabasefun.firebaseapp.com",
-    databaseURL: "https://employeedatabasefun.firebaseio.com",
-    projectId: "employeedatabasefun",
-    storageBucket: "employeedatabasefun.appspot.com",
-    messagingSenderId: "1057084575215"
-  };
-  firebase.initializeApp(config);
-</script>
+
 
 
     <!-- JavaScript -->
