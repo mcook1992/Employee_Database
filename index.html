@@ -16,10 +16,7 @@
     integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
     crossorigin="anonymous"
   />
-  <link
-  rel="stylesheet"
-  href="style.css"
-  />
+  <link rel="stylesheet" href="style.css"/>
 
   <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
   
@@ -27,17 +24,8 @@
 
   <link rel='icon'type='image/png' href = 'bcumb.png'>
 
-    <title>Employeee Database</title>
+    <title>Employee Database</title>
 
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Bootstrap CDN-->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -58,6 +46,29 @@
       </div>
       </div>
 
+
+<!-- table for employees  -->
+    
+    <div class="container">
+        <div class="col-lg-12">
+            <div class="row">
+              <table class="table text-center" id="employee-table">
+                  <thead id="whitetable">
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Position</th>
+                      <th scope="col">Start Date</th>
+                      <th scope="col">Months Worked</th>
+                      <th scope="col">Monthly Salary</th>
+                      <th scope="col">Total Billed</th>
+                    </tr>
+                </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
       <!-- Make Your Bid -->
       <div class="row forms">
         <div class="col-lg-12">
@@ -77,20 +88,20 @@
                   <input class="form-control" id="employee-position" type="text" placeholder="ROLE"/>
                 </div>
                 <div class="form-group row">
-                        <label for="employee-startDate">Start Date</label>
-                        <input class="form-control" id="employee-startDate" type="number"  placeholder="MM/DD/YYYY"/>
-                      </div>
+                  <label for="employee-startDate">Start Date</label>
+                  <input class="form-control" id="employee-startDate" type="date"  placeholder="MM/DD/YYYY"/>
+                </div>
 
 
-                      <!-- <div class="form-group row">
-                            <label for="employee-monthsWorked">Months Worked</label>
-                            <input class="form-control" id="employee-monthsWorked" type="number" />
-                          </div> -->
-                          <div class="form-group row">
-                                <label for="employee-salary">Monthly $ Rate</label>
-                                <input class="form-control" id="employee-salary" type="number" placeholder="$1"/>
+                <!-- <div class="form-group row">
+                      <label for="employee-monthsWorked">Months Worked</label>
+                      <input class="form-control" id="employee-monthsWorked" type="number" />
+                    </div> -->
+                <div class="form-group row">
+                  <label for="employee-salary">Monthly $ Rate</label>
+                  <input class="form-control" id="employee-salary" type="number" placeholder="$1"/>
 
-                              </div>
+                </div>
 
                 <button class="btn btn-primary" id="submit-info" type="submit">
                   Submit
@@ -101,27 +112,6 @@
         </div>
       </div>
     </div>
-
-
-<!-- table for employees  -->
-    
-    <div class="container">
-        <div class="col-lg-12">
-            <div class="row">
-              <table class="table">
-                  <thead id="whitetable">
-                <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Position</th>
-                    <th scope="col">Start Date</th>
-                    <th scope="col">Days Worked</th>
-                    <th scope="col">Salary</th>
-                </tr>
-            </thead>
-          </div>
-        </div>
-      </div>
-
 <!--firebase  -->
 
 <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
@@ -132,13 +122,15 @@
 
 
     <!-- JavaScript -->
-    <script src="database.js"></script>
+
 
     <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>
+
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
       integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
@@ -150,6 +142,7 @@
       crossorigin="anonymous"
     ></script>
 
+    <script src="database.js"></script>
 
   </body>
 </html>
