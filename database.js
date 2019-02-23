@@ -46,16 +46,23 @@ database.ref().on(
 
     function(snapshot){
         var sv = snapshot.val();
+
+        //Convert Date
+        var newFormat = "MM/DD/YYYY";
+        var convertDate = moment(sv.startDate, newFormat);
+
+
         var tableRow = $("<tr>");
         var nameInfo = $("<th>").text(sv.name);
         var positionInfo = $("<th>").text(sv.position);
         var salaryInfo = $("<th>").text(sv.salary);
-        var startDateInfo = $("<th>").text(sv.startDate);
+        var startDateInfo = $("<th>").text(convertDate);
         var monthsWorked = $("<th></th>").text(4);
         var calcTotalBilled = (4 * parseInt(sv.salary));
         var totalBilled = $("<th></th>").text(calcTotalBilled);
 
-        tableRow.append(nameInfo, positionInfo, startDateInfo, salaryInfo, monthsWorked, totalBilled);
+
+        tableRow.append(nameInfo, positionInfo, startDateInfo, monthsWorked, salaryInfo, totalBilled);
 
         $("#employee-table").append(tableRow);
     
